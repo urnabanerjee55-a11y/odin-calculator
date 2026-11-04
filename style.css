@@ -1,0 +1,118 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Very Dark Blackish-Grey Screen/Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+/* Grey Calculator Outer Body */
+.calculator {
+  width: 320px;
+  background-color: #3a3d40;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Display Screen */
+.display {
+  display: flex;
+  width: 100%;
+}
+
+.display {
+  width: 100%;
+  height: 65px;
+  background-color: #1e2022;
+  border: 1px solid #4f5356;
+  outline: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px 15px;
+}
+
+/* Flexbox Button Layout */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row button {
+  flex: 1;
+}
+
+/* Main Section Layout */
+.main-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Operands Container (Grid for digits 0-9) */
+.operands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 3;
+}
+
+.operands .zero {
+  grid-column: span 3;
+}
+
+/* Operators Container */
+.operators {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* Equal Container */
+.equal-container {
+  display: flex;
+  width: 100%;
+}
+
+.equal-container .Equal {
+  width: 100%;
+}
+
+/* General Button Styles */
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero,
+.AC, .Delete, .Add, .Subtract, .Multiply, .Divide, .Point, .Equal {
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background-color: #505458;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
